@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily News</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+    }
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .main-content {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .article {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 15px;
+      width: 48%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+    .article img {
+      width: 100%;
+      height: auto;
+    }
+    .article h2 {
+      color: #333;
+      font-size: 1.8em;
+    }
+    .article p {
+      color: #555;
+      font-size: 1em;
+    }
+    .sidebar {
+      width: 30%;
+    }
+    .sidebar .box {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      margin-bottom: 20px;
+      padding: 15px;
+    }
+    .sidebar .box h3 {
+      color: #333;
+    }
+    .sidebar .box p {
+      color: #666;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daily News</h1>
+    <p>Bringing you the latest updates from around the world.</p>
+  </header>
+
+  <div class="container">
+    <div class="main-content">
+      <div class="article">
+        <img src="https://via.placeholder.com/600x300" alt="News Image 1">
+        <h2>Breaking News: Technology Revolutionizes Healthcare</h2>
+        <p>In a groundbreaking development, new AI-powered technologies are transforming the healthcare industry. Experts say that these advancements could potentially improve patient outcomes and reduce medical errors...</p>
+        <a href="#">Read more...</a>
+      </div>
+
+      <div class="article">
+        <img src="https://via.placeholder.com/600x300" alt="News Image 2">
+        <h2>Global Climate Change: How We Can Help</h2>
+        <p>As climate change continues to affect the planet, many are searching for ways to reduce their carbon footprint. Environmentalists are urging governments to take action before it’s too late...</p>
+        <a href="#">Read more...</a>
+      </div>
+
+      <div class="sidebar">
+        <div class="box">
+          <h3>Latest Sports News</h3>
+          <p>In sports, the championship game last night was nothing short of amazing. The final score was incredibly close...</p>
+          <a href="#">Read more...</a>
+        </div>
+
+        <div class="box">
+          <h3>Upcoming Events</h3>
+          <p>Don’t miss the upcoming art exhibition opening next week at the City Art Museum. It promises to be a unique experience...</p>
+          <a href="#">Read more...</a>
+        </div>
+
+        <div class="box">
+          <h3>Business Insights</h3>
+          <p>The stock market has shown signs of recovery after a long period of downturn. Investors are feeling cautiously optimistic...</p>
+          <a href="#">Read more...</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Daily News. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

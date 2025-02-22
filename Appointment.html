@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f1f1f1;
+        }
+
+        .appointment-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('Appointment Form image.jpeg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .appointment-form {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            width: 50%;
+            max-width: 600px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .appointment-form h2 {
+            text-align: center;
+            color: #007BFF;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .appointment-form label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .appointment-form input,
+        .appointment-form select,
+        .appointment-form textarea,
+        .appointment-form button {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .appointment-form input,
+        .appointment-form select,
+        .appointment-form textarea {
+            background: #f9f9f9;
+        }
+
+        .appointment-form button {
+            background: #007BFF;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+        }
+
+        .appointment-form button:hover {
+            background: #0056b3;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .radio-group label {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .appointment-form {
+                width: 90%;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="appointment-container">
+        <form class="appointment-form" action="/submit" method="POST">
+            <h2>Appointment Form</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+
+            <label for="date">Select Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Select Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="department">Department:</label>
+            <select id="department" name="department" required>
+                <option value="blood_bank">Blood Bank</option>
+                <option value="cardiology">Cardiology</option>
+                <option value="physiotherapy">Physiotherapy</option>
+                <option value="critical_care">Critical Care</option>
+                <option value="dental">Dental</option>
+                <option value="dermatology_cosmetology">Dermatology & Cosmetology</option>
+                <option value="emergency_trauma">Emergency & Trauma</option>
+                <option value="ent">ENT</option>
+                <option value="general_laparoscopic_surgery">General & Laparoscopic Surgery</option>
+                <option value="health_checkup">Health Checkup</option>
+                <option value="internal_medicine_rheumatology">Internal Medicine & Rheumatology</option>
+                <option value="intervention_pain_management">Intervention Pain Management</option>
+                <option value="liver_transplant_hpb_surgery">Liver Transplant & Hepato-pancreato-biliary Surgery</option>
+            </select>
+
+            <label>Choose Patient Type:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="patient" value="existing" required> Existing</label>
+                <label><input type="radio" name="patient" value="new" required> New</label>
+            </div>
+
+            <label for="reason">Reason for Visit:</label>
+            <textarea id="reason" name="reason" rows="3" placeholder="Describe your reason for visit"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

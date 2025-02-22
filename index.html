@@ -1,0 +1,654 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>healthcare success</title>
+  <style>
+    /* General styling */
+    body, ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navbar styling */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      background-color: rgb(64, 233, 21);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .logo img {
+      height: 40px;
+      width: auto;
+      border-radius: 50%;
+    }
+
+    .logo-text {
+      color: #fff;
+      font-size: 1.5rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links li {
+      position: relative;
+    }
+
+    .nav-links li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+    }
+
+    .nav-links li a:hover {
+      color: #ddd;
+    }
+
+    /* Dropdown menu */
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #333;
+      min-width: 150px;
+      padding: 0.5rem 0;
+      border-radius: 5px;
+    }
+
+    .dropdown li a {
+      color: #fff;
+      padding: 0.5rem 1rem;
+      display: block;
+    }
+
+    .dropdown li a:hover {
+      background-color: #444;
+    }
+
+    /* Show dropdown on hover */
+    .nav-links li:hover .dropdown {
+      display: block;
+    }
+
+    /* Full-Width Image Slider Styling */
+    .slider {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.8s ease-in-out;
+    }
+
+    .slides img {
+      width: 100vw; /* Full viewport width */
+      height: 80vh; /* Full viewport height for full-screen slider */
+      object-fit: cover; /* Ensure images cover the area without distortion */
+    }
+
+    /* Navigation Buttons */
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(14, 14, 14, 0.5);
+      color: #fff;
+      border: none;
+      font-size: 1.5rem;
+      padding: 0.5rem;
+      cursor: pointer;
+      border-radius: 50%;
+      z-index: 10;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+
+    /* Services Section */
+     /*.services-section {
+      padding: 3rem 2rem;
+      text-align: center;
+      background-color: #f4f4f4;
+    }
+
+    .services-section h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .services-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .service-card {
+      background-color: white;
+      padding: 2rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .service-card p {
+      font-size: 1rem;
+      color: #555;
+    } */
+    
+    /* Updated Services Section Styling */
+
+    /* General styling */
+body, ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: rgb(4, 122, 146);
+  position: relative;
+  z-index: 10; /* Ensure navbar is above other content */
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+.nav-links li a:hover {
+  color: #ddd;
+}
+
+/* Dropdown menu */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  min-width: 150px;
+  padding: 0.5rem 0;
+  border-radius: 5px;
+  z-index: 20; /* Ensure dropdown is above the slider */
+}
+
+.dropdown li a {
+  color: #fff;
+  padding: 0.5rem 1rem;
+  display: block;
+}
+
+.dropdown li a:hover {
+  background-color: #444;
+}
+
+/* Show dropdown on hover */
+.nav-links li:hover .dropdown {
+  display: block;
+}
+
+/* Full-Width Image Slider Styling */
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1; /* Ensure slider is below the navbar and dropdown */
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+}
+
+.slides img {
+  width: 150vw; /* Full viewport width */
+  height: 80vh; /* Full viewport height for full-screen slider */
+  object-fit: cover; /* Ensure images cover the area without distortion */
+}
+
+/* Navigation Buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(14, 14, 14, 0.5);
+  color: #fff;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10; /* Ensure buttons are above the slider */
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+    /* Footer Section */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 2rem 0;
+      text-align: center;
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      justify-items: center;
+      text-align: left;  
+    }
+
+    footer p {
+      font-size: 1rem;
+      color: #f4f4f4; /* Light color for the footer text */
+    }
+
+    footer p strong {
+      color: #f4f4f4;
+    }
+
+    .hospital-info {
+      margin-top: 1rem;
+    }
+
+    .hospital-info p {
+      margin: 0.5rem 0;
+      font-size: 1rem;
+    }
+
+    .hospital-info p strong {
+      color: #f4f4f4;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .footer-content {
+        grid-template-columns: 1fr; /* Stack columns on small screens */
+        text-align: center;
+      }
+
+      .slides img {
+        height: 60vh; /* Adjust height for smaller screens */
+      }
+
+      .services-list {
+        grid-template-columns: 1fr; /* Stack service cards */
+      }
+    }
+
+
+
+    <style>
+      body {
+          font-family: 'Arial', sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f4f4f4;
+      }
+      /* Navigation bar styles */
+      nav {
+          background-color: #0077b6;
+          padding: 20px;
+          text-align: center;
+      }
+      nav a {
+          color: white;
+          margin: 0 20px;
+          text-decoration: none;
+          font-size: 18px;
+          font-weight: bold;
+      }
+      nav a:hover {
+          text-decoration: underline;
+          color: #ffcc00;
+      }
+      /* Main container styles */
+      .container {
+          display: flex;
+          justify-content: space-between;
+          padding: 40px;
+          background-color: #ffffff;
+      }
+      .image-section {
+          flex: 1;
+          padding-right: 20px;
+          text-align: center;
+      }
+      .image-section img {
+          width: 100%;
+          height: auto;
+          border-radius: 12px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .text-section {
+          flex: 1;
+          padding-left: 40px;
+          color: #333;
+      }
+      .text-section h2 {
+          color: #0077b6;
+          font-size: 30px;
+          font-weight: bold;
+          margin-bottom: 20px;
+      }
+      .text-section ul {
+          list-style-type: none;
+          padding: 0;
+      }
+      .text-section ul li {
+          margin: 15px 0;
+          font-size: 18px;
+          line-height: 1.6;
+      }
+      .text-section ul li::before {
+          content: "✔️";
+          margin-right: 10px;
+          color: #0077b6;
+      }
+      /* Quick Links Section */
+      .quick-links {
+          background-color: #0077b6;
+          padding: 20px;
+          color: white;
+          text-align: center;
+      }
+      .quick-links h3 {
+          font-size: 24px;
+          margin-bottom: 15px;
+      }
+      .quick-links ul {
+          list-style-type: none;
+          padding: 0;
+      }
+      .quick-links ul li {
+          display: inline-block;
+          margin: 10px 15px;
+      }
+      .quick-links ul li a {
+          color: white;
+          text-decoration: none;
+          font-size: 18px;
+          font-weight: bold;
+      }
+      .quick-links ul li a:hover {
+          text-decoration: underline;
+      }
+      /* Button styles */
+      .call-button {
+          background-color: #0077b6;
+          color: white;
+          padding: 18px 40px;
+          font-size: 20px;
+          font-weight: bold;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          margin-top: 30px;
+          display: inline-block;
+          text-align: center;
+          transition: background-color 0.3s;
+      }
+      .call-button:hover {
+          background-color: #005f8a;
+      }
+      /* Address and contact styles */
+      .address {
+          margin-top: 30px;
+          font-size: 16px;
+      }
+      .address a {
+          color: #0077b6;
+          text-decoration: none;
+      }
+      .address a:hover {
+          text-decoration: underline;
+      }
+      /* Footer styles */
+      footer {
+          background-color: #333;
+          color: white;
+          text-align: center;
+          padding: 20px 0;
+          position: relative;
+          width: 100%;
+      }
+      footer p {
+          margin: 5px 0;
+      }
+      /* Responsive design */
+      @media (max-width: 768px) {
+          .container {
+              flex-direction: column;
+              align-items: center;
+              padding: 20px;
+          }
+          .image-section,
+          .text-section {
+              flex: none;
+              width: 100%;
+              padding: 0;
+          }
+          nav a {
+              margin: 0 10px;
+              font-size: 16px;
+          }
+          .quick-links ul li {
+              display: block;
+              margin-bottom: 10px;
+          }
+      }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <img src="c:\Users\ASUS\Desktop\akash hos\download.png" alt="Health">
+        <span class="logo-text">Health Care Success</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="doctors.html">Doctors</a></li>
+        <li><a href="appointment.html">Appointment</a></li>
+        
+          
+        <li><a href="services.html">Services</a>
+          <ul class="dropdown">
+            <li><a href="emr.html">Emergency Care</a></li>
+            <li><a href="medical-services.html">Medical Services</a></li>
+            <li><a href="specialty-departments.html">Specialty Departments</a></li>
+            <li><a href="infrastructure-comfort-facilities.html">Infrastructure and Comfort Facilities</a></li>
+            <li><a href="community-outreach-services.html">Community and Outreach Services</a></li>
+            <li><a href="rehabilitation-therapy.html">Rehabilitation and Therapy</a></li>
+            <li><a href="surgical-services.html">Surgical Services</a></li>
+          </ul>
+        </li>
+        
+        <li><a href="patient-registration.html">Register</a></li>
+        <li><a href="login-page.html">Login</a></li>
+        
+        
+        <li><a href="contacts.html">contacts</a></li>
+        
+      </ul>
+    </div>
+  </header>
+
+  <!-- Full-Width Image Slider -->
+  <div class="slider">
+    <button class="prev">&lt;</button>
+    <div class="slides">
+      <img src="nurse-front-hospital_1308-43320.jpg" alt="Image 1">
+      <img src="medical-surgery-room-concept-cartoon-hospital-equipment-medicine-life-support-system_1441-1916.jpg" alt="Image 2">
+      <img src="slider3.webp" alt="Image 3">
+      <img src="slider4.jpg" alt="Image 4">
+      <img src="slider5.jpg" alt="Image 5">
+    </div>
+    <button class="next">&gt;</button>
+  </div>
+
+  <!-- Services Section -->
+  <!-- <div class="services-section">
+    <h2>Our Services</h2>
+    <p>We offer a range of specialized medical services to meet all your healthcare needs. From emergency care to specialized treatments, we are here to help you stay healthy.</p>
+
+    <div class="services-list">
+      <div class="service-card">
+        <h3>Emergency Care</h3>
+        <p>Immediate medical attention for serious and life-threatening conditions.</p>
+      </div>
+      <div class="service-card">
+        <h3>Cardiology</h3>
+        <p>Comprehensive care for heart-related conditions with specialized treatment options.</p>
+      </div>
+      <div class="service-card">
+        <h3>Neurology</h3>
+        <p>Expert diagnosis and treatment for neurological disorders and brain injuries.</p>
+      </div>
+      <div class="service-card">
+        <h3>Pediatrics</h3>
+        <p>Comprehensive healthcare services for infants, children, and adolescents.</p>
+      </div>
+      <div class="service-card">
+        <h3>Medical Services</h3>
+        <p>Wide range of diagnostic, therapeutic, and preventive healthcare services.</p>
+      </div>
+    </div>
+  </div> -->
+
+  
+
+<!-- Quick Links Section -->
+<div class="quick-links">
+  <h3>Quick Links</h3>
+  <ul>
+      <li><a href="doctors.html">Doctors</a></li>
+      <li><a href="medical-services.html">Medical services</a></li>
+      <li><a href="patient-registration.html">Register</a></li>
+      <li><a href="Health-Checkup.html">Health Checkups</a></li>
+      <li><a href="#">Video Gallery</a></li>
+      <li><a href="">News</a></li>
+      <li><a href="cardiology.html">Cardiology</a></li>
+      <li><a href="physiotherapy.html">Physiotherapy</a></li>
+      <li><a href="emergency.html">Emergency Services</a></li>
+      <li><a href="critical-care.html">Critical Care</a></li>
+      <li><a href="dental.html">Dental</a></li>
+      <li><a href="dermatology.html">Dermatology & Cosmetology</a></li>
+      
+      <li><a href="emergency.html">Emergency & Trauma</a></li>
+      <li><a href="ent.html">ENT</a></li>
+      <li><a href="blood-bank.html">Blood Bank</a></li>
+      <li><a href="general-surgery.html"> General & Laparoscopic Surgery</a></li>
+      <li><a href="health-checkup.html">Health Checkup</a></li>
+      <li><a href="pain-management.html">Intervention Pain Management</a></li>
+      <li><a href="human-internal.html">Liver Transplant & Hepato-pancreato-biliary Surgery</a></li>
+      <li><a href="payment's.html">payment</a></li>
+  </ul>
+</div>
+
+
+
+
+
+
+  <!-- Footer with Hospital Information -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 healthcaresuccess. All rights reserved.</p>
+      <div class="hospital-info">
+        <p><strong>Hospital Name:</strong> Apollo Hospital</p>
+        <p><strong>Address:</strong> Chhindweara m.p., State, 12345</p>
+        <p><strong>Phone:</strong> +91 9575133239</p>
+        <p><strong>Email:</strong> 12sia@gmail.com</p>
+        <p><strong>Location:</strong> Chhindweara</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Slider functionality
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.slides img');
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+      const offset = -index * 100; // Move slides horizontally
+      document.querySelector('.slides').style.transform = translateX(${offset}vw);
+    }
+
+    document.querySelector('.prev').addEventListener('click', () => {
+      currentIndex = (currentIndex === 0) ? totalSlides - 1 : currentIndex - 1;
+      showSlide(currentIndex);
+    });
+
+    document.querySelector('.next').addEventListener('click', () => {
+      currentIndex = (currentIndex === totalSlides - 1) ? 0 : currentIndex + 1;
+      showSlide(currentIndex);
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Community and Outreach Services</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f7f7f7;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(to right, #008CBA, #00bcd4);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8em;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 40px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #008CBA;
+            font-size: 2em;
+            border-bottom: 2px solid #008CBA;
+            padding-bottom: 5px;
+            cursor: pointer;
+        }
+
+        .service {
+            margin-bottom: 40px;
+        }
+
+        .service-content {
+            display: none;
+            font-size: 1.1em;
+            margin-top: 15px;
+            color: #555;
+        }
+
+        .service h3 {
+            color: #333;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .cta {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .cta p {
+            font-size: 1.4em;
+            margin-bottom: 20px;
+        }
+
+        .cta a {
+            background: linear-gradient(to right, #008CBA, #00bcd4);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: background 0.3s ease;
+        }
+
+        .cta a:hover {
+            background: #005f73;
+        }
+
+        .cta a:focus {
+            outline: none;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2em;
+            }
+
+            .service h3 {
+                font-size: 1.4em;
+            }
+
+            section {
+                padding: 20px;
+                margin: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Community and Outreach Services</h1>
+        <p>Empowering Communities through Health, Education, and Research</p>
+    </header>
+
+    <section>
+        <div class="service">
+            <h2 onclick="toggleService('healthCamps')">Health Camps</h2>
+            <div id="healthCamps" class="service-content">
+                <h3>Free Health Camps for All</h3>
+                <p>Join our regular health camps aimed at providing free medical checkups and health awareness sessions. These camps are designed to serve underprivileged communities and offer vital health screenings such as blood pressure, diabetes, vision, and more.</p>
+            </div>
+        </div>
+
+        <div class="service">
+            <h2 onclick="toggleService('educationTraining')">Education and Training</h2>
+            <div id="educationTraining" class="service-content">
+                <h3>Empowering Through Knowledge</h3>
+                <p>We offer a wide range of free educational programs and vocational training sessions to enhance skills, improve job prospects, and promote lifelong learning. Our workshops focus on both technical and soft skills, ensuring holistic development for community members.</p>
+            </div>
+        </div>
+
+        <div class="service">
+            <h2 onclick="toggleService('medicalResearch')">Medical Research</h2>
+            <div id="medicalResearch" class="service-content">
+                <h3>Contributing to Health Innovations</h3>
+                <p>Our medical research initiatives focus on advancing healthcare by conducting studies to understand better treatment options, disease prevention strategies, and healthcare access. By participating, you help shape the future of healthcare in your community.</p>
+            </div>
+        </div>
+
+        <div class="cta">
+            <p>Get involved in our community outreach programs and make a difference today!</p>
+            <a href="mailto:info@outreachservices.org">Contact Us Now</a>
+        </div>
+    </section>
+
+    <script>
+        function toggleService(serviceId) {
+            const serviceContent = document.getElementById(serviceId);
+            if (serviceContent.style.display === "none" || serviceContent.style.display === "") {
+                serviceContent.style.display = "block";
+            } else {
+                serviceContent.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apartment Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #2f4f4f;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+        }
+
+        .navbar {
+            background-color: #008080;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        .navbar a:hover {
+            background-color: #006666;
+        }
+
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .intro {
+            background-color: #ffffff;
+            margin: 20px auto;
+            padding: 40px;
+            width: 80%;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .intro h2 {
+            color: #2f4f4f;
+        }
+
+        .service-cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .service-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            width: 250px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .service-card:hover {
+            transform: scale(1.05);
+        }
+
+        .service-card h3 {
+            color: #2f4f4f;
+        }
+
+        footer {
+            background-color: #2f4f4f;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Apartments Image Section */
+        .apartments {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .apartment-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            width: 250px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .apartment-card:hover {
+            transform: scale(1.05);
+        }
+
+        .apartment-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .apartment-card h3 {
+            color: #2f4f4f;
+        }
+
+        /* Service Form Styling */
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        form input,
+        form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        form button {
+            padding: 12px;
+            background-color: #2f4f4f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1.1rem;
+        }
+
+        form button:hover {
+            background-color: #006666;
+        }
+
+        /* Media Queries for responsive design */
+        @media (max-width: 768px) {
+            .service-cards {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .apartments {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .navbar a {
+                padding: 12px;
+                font-size: 1.1em;
+            }
+
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            .intro h2 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Apartment Services & Connections</h1>
+        <p>Your Guide to Comfortable Living</p>
+    </header>
+
+    <div class="navbar">
+        <a href="#apartments">Our Apartments</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Our Apartments Section -->
+    <section id="apartments">
+        <div class="intro">
+            <h2>Our Apartments</h2>
+            <p>Choose from our variety of well-maintained apartments designed for your comfort and convenience.</p>
+        </div>
+        <div class="apartments">
+            <div class="apartment-card">
+                <img src="apartment1.jpg" alt="Luxury Apartment">
+                <h3>Luxury 2BHK</h3>
+                <p>Spacious apartments with modern amenities for a premium living experience.</p>
+            </div>
+            <div class="apartment-card">
+                <img src="apartment2.jpg" alt="Family Apartment">
+                <h3>Family 3BHK</h3>
+                <p>Ideal for families, featuring ample space and comfort for everyone.</p>
+            </div>
+            <div class="apartment-card">
+                <img src="apartment3.jpg" alt="Studio Apartment">
+                <h3>Studio Apartment</h3>
+                <p>Compact and convenient living spaces for singles or young professionals.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="intro">
+            <h2>Our Services</h2>
+            <p>We offer a wide range of services to ensure a comfortable living experience for all our tenants.</p>
+        </div>
+        <div class="service-cards">
+            <div class="service-card">
+                <h3>24/7 Maintenance</h3>
+                <p>Our dedicated maintenance team is available round-the-clock for any repairs or assistance.</p>
+            </div>
+            <div class="service-card">
+                <h3>Security Services</h3>
+                <p>We prioritize your safety with 24/7 security surveillance and controlled access.</p>
+            </div>
+            <div class="service-card">
+                <h3>Housekeeping</h3>
+                <p>Our housekeeping team ensures that common areas and apartments are clean and well-maintained.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>&copy; 2024 Apartment Services</p>
+        <p>Email: info@apartmentservices.com | Phone: +123-456-7890</p>
+    </footer>
+</body>
+
+</html>

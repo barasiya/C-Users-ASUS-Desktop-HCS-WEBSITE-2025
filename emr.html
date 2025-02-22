@@ -1,0 +1,239 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Services</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        /* Navigation bar styles */
+        nav {
+            background-color: #0077b6;
+            padding: 20px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+            color: #ffcc00;
+        }
+        /* Main container styles */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px;
+            background-color: #ffffff;
+        }
+        .image-section {
+            flex: 1;
+            padding-right: 20px;
+            text-align: center;
+        }
+        .image-section img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .text-section {
+            flex: 1;
+            padding-left: 40px;
+            color: #333;
+        }
+        .text-section h2 {
+            color: #0077b6;
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .text-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .text-section ul li {
+            margin: 15px 0;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .text-section ul li::before {
+            content: "✔️";
+            margin-right: 10px;
+            color: #0077b6;
+        }
+        /* Quick Links Section */
+        .quick-links {
+            background-color: #0077b6;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+        .quick-links h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        .quick-links ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .quick-links ul li {
+            display: inline-block;
+            margin: 10px 15px;
+        }
+        .quick-links ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .quick-links ul li a:hover {
+            text-decoration: underline;
+        }
+        /* Button styles */
+        .call-button {
+            background-color: #0077b6;
+            color: white;
+            padding: 18px 40px;
+            font-size: 20px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 30px;
+            display: inline-block;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        .call-button:hover {
+            background-color: #005f8a;
+        }
+        /* Address and contact styles */
+        .address {
+            margin-top: 30px;
+            font-size: 16px;
+        }
+        .address a {
+            color: #0077b6;
+            text-decoration: none;
+        }
+        .address a:hover {
+            text-decoration: underline;
+        }
+        /* Footer styles */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            width: 100%;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+            }
+            .image-section,
+            .text-section {
+                flex: none;
+                width: 100%;
+                padding: 0;
+            }
+            nav a {
+                margin: 0 10px;
+                font-size: 16px;
+            }
+            .quick-links ul li {
+                display: block;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <a href="about.html">About Us</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="image-section">
+            <img src="hospital  Ambulance.jpg" alt="Emergency Services">
+        </div>
+        <div class="text-section">
+            <h2 id="services">Emergency Services We Offer:</h2>
+            <ul>
+                <li>Management of all kinds of medical and surgical emergencies including Poly Trauma</li>
+                <li>Fleet of fully equipped Ambulances</li>
+                <li>ICU on Wheels</li>
+                <li>Tele Ambulance</li>
+                <li>Pick up & Drop Facility</li>
+                <li>Advanced ATLS trauma support</li>
+                <li>24/7 backup support with diagnostic imaging and laboratory facilities</li>
+                <li>Exclusive fully-fledged emergency OT</li>
+            </ul>
+            <button class="call-button" onclick="window.location.href='tel:1234567890';">Call Emergency Services</button>
+            <div class="address" id="contact">
+                <h3>Our Hospital Address:</h3>
+                <p>123 Health Street, Cityville, Country 12345</p>
+                <p>For Emergency Ambulance Services, call: <a href="tel:123-456-7890">123-456-7890</a></p>
+            </div>
+        </div>
+    </div>
+
+   <!-- Quick Links Section -->
+<div class="quick-links">
+    <h3>Quick Links</h3>
+    <ul>
+        <li><a href="doctors.html">Doctors</a></li>
+        <li><a href="medical-services.html">Medical services</a></li>
+        <li><a href="patient-registration.html">Register</a></li>
+        <li><a href="Health-Checkup.html">Health Checkups</a></li>
+        <li><a href="#">Video Gallery</a></li>
+        <li><a href="">News</a></li>
+        <li><a href="cardiology.html">Cardiology</a></li>
+        <li><a href="physiotherapy.html">Physiotherapy</a></li>
+        <li><a href="emergency.html">Emergency Services</a></li>
+        <li><a href="critical-care.html">Critical Care</a></li>
+        <li><a href="dental.html">Dental</a></li>
+        <li><a href="dermatology.html">Dermatology & Cosmetology</a></li>
+        
+        <li><a href="emergency.html">Emergency & Trauma</a></li>
+        <li><a href="ent.html">ENT</a></li>
+        <li><a href="blood-bank.html">Blood Bank</a></li>
+        <li><a href="general-surgery.html"> General & Laparoscopic Surgery</a></li>
+        <li><a href="health-checkup.html">,Health Checkup,</a></li>
+        <li><a href="pain-management.html">Intervention Pain Management</a></li>
+        <li><a href="human-internal.html">Liver Transplant & Hepato-pancreato-biliary Surgery</a></li>
+    </ul>
+  </div>
+  
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Health Emergency Services. All Rights Reserved.</p>
+        <p>Phone: 123-456-7890 | Email: <a href="mailto:contact@healthservices.com">contact@healthservices.com</a></p>
+    </footer>
+
+</body>
+</html>
+

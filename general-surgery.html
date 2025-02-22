@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General & Laparoscopic Surgery</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .container {
+            width: 85%;
+            margin: 0 auto;
+            padding: 30px 0;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        .content img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+        }
+        .text {
+            width: 100%;
+            max-width: 500px;
+            margin-right: 20px;
+        }
+        .text h2 {
+            color: #333;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+        .text p {
+            color: #555;
+            line-height: 1.6;
+        }
+        .section {
+            margin-top: 60px;
+        }
+        .section h2 {
+            text-align: center;
+            color: #333;
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+        .doctor-card, .department-card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .doctor-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        .doctor-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .doctor-info h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .doctor-info p {
+            color: #555;
+        }
+        .departments {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .contact-info {
+            text-align: center;
+            margin-top: 40px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .contact-info h3 {
+            color: #333;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .contact-info p {
+            color: #555;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .text, .content img {
+                width: 100%;
+                max-width: none;
+            }
+            .doctor-card, .department-card {
+                max-width: 90%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>General & Laparoscopic Surgery</h1>
+</header>
+
+<div class="container">
+    <div class="content">
+        <div class="text">
+            <h2>Expert Surgeons for Your Health</h2>
+            <p>Our team specializes in both general surgery and laparoscopic procedures, ensuring precision and care. With advanced techniques and the latest equipment, we offer minimally invasive solutions to provide quicker recovery times and less scarring.</p>
+        </div>
+        <div>
+            <!-- Replace with actual image source -->
+            <img src="path/to/your/surgery-image.jpg" alt="General & Laparoscopic Surgery">
+        </div>
+    </div>
+</div>
+
+<!-- Doctors Section -->
+<div class="section">
+    <h2>Meet Our Doctors</h2>
+    <div class="doctor-card">
+        <div class="doctor-info">
+            <img src="path/to/doctor-image1.jpg" alt="Doctor 1">
+            <h3>Dr. John Doe</h3>
+            <p>Specialization: General Surgery & Laparoscopic Surgery</p>
+            <p>Experience: 15+ years of experience in minimally invasive surgeries.</p>
+            <p><strong>Contact:</strong> <a href="tel:+1234567890">+1 234 567 890</a></p>
+        </div>
+    </div>
+
+    <div class="doctor-card">
+        <div class="doctor-info">
+            <img src="path/to/doctor-image2.jpg" alt="Doctor 2">
+            <h3>Dr. Jane Smith</h3>
+            <p>Specialization: General Surgery</p>
+            <p>Experience: Expertise in complex abdominal surgeries and patient care.</p>
+            <p><strong>Contact:</strong> <a href="tel:+1234567891">+1 234 567 891</a></p>
+        </div>
+    </div>
+</div>
+
+<!-- Departments Section -->
+<div class="section">
+    <h2>Our Departments</h2>
+    <div class="departments">
+        <div class="department-card">
+            <h3>Laparoscopic Surgery</h3>
+            <p>Minimally invasive surgery techniques using small incisions and advanced equipment for faster recovery.</p>
+        </div>
+
+        <div class="department-card">
+            <h3>General Surgery</h3>
+            <p>Comprehensive surgical care for a wide range of conditions, including appendicitis, hernias, and more.</p>
+        </div>
+
+        <div class="department-card">
+            <h3>Emergency Surgery</h3>
+            <p>Rapid and effective treatment for urgent surgical needs, with a focus on trauma and critical care.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Contact Information Section -->
+<div class="contact-info">
+    <h3>Contact Us</h3>
+    <p>If you need to get in touch with one of our doctors or the hospital, please find the contact information below:</p>
+    <p><strong>Hospital Contact:</strong> <a href="tel:+11234567890">+1 123 456 7890</a></p>
+    <p><strong>Doctor's Office:</strong> <a href="tel:+11234567891">+1 123 456 7891</a></p>
+</div>
+
+<footer>
+    <p>&copy; 2024 General & Laparoscopic Surgery. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

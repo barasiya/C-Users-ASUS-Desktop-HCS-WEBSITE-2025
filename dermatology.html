@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dermatology & Cosmetology Department offering professional skin and beauty treatments.">
+    <title>Dermatology & Cosmetology Department</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            background-color: #343a40;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: #007bff;
+        }
+        .section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .services ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .services li {
+            padding: 10px;
+            cursor: pointer;
+            background-color: #f0f0f0;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .services li:hover {
+            background-color: #007bff;
+            color: white;
+        }
+        .service-details {
+            display: none;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-left: 3px solid #007bff;
+            margin-top: 10px;
+        }
+        .contact-info p {
+            margin: 5px 0;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        form {
+            margin-top: 20px;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        form input, form select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function toggleServiceDetails(serviceId) {
+            var details = document.getElementById(serviceId);
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Dermatology & Cosmetology Department</h1>
+        <p>Your skin and beauty are our priority</p>
+    </header>
+
+    <nav>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#team">Our Team</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+
+    <div id="about" class="section">
+        <h2>About Us</h2>
+        <p>Our Dermatology & Cosmetology Department offers the latest treatments for all your skin and beauty needs. We provide services ranging from medical dermatology to cosmetic procedures aimed at enhancing your appearance.</p>
+    </div>
+
+    <div id="services" class="section services">
+        <h2>Our Services</h2>
+        <ul>
+            <li onclick="toggleServiceDetails('skinTreatments')">Skin Treatments (Acne, Eczema, Psoriasis)</li>
+            <div id="skinTreatments" class="service-details">
+                <p>We offer specialized treatments for various skin conditions like acne, eczema, and psoriasis. Our treatments are personalized to suit your skin type and needs.</p>
+            </div>
+            <li onclick="toggleServiceDetails('hairLossTreatment')">Hair Loss Treatment</li>
+            <div id="hairLossTreatment" class="service-details">
+                <p>We provide advanced solutions for hair restoration and scalp health, including medications, PRP therapy, and hair transplants.</p>
+            </div>
+            <li onclick="toggleServiceDetails('antiAging')">Anti-aging Solutions (Botox, Fillers)</li>
+            <div id="antiAging" class="service-details">
+                <p>Our anti-aging treatments include Botox and dermal fillers to reduce wrinkles, fine lines, and restore youthful volume to your face.</p>
+            </div>
+            <li onclick="toggleServiceDetails('laserHairRemoval')">Laser Hair Removal</li>
+            <div id="laserHairRemoval" class="service-details">
+                <p>We offer effective and long-lasting hair removal treatments using state-of-the-art laser technology for all skin types.</p>
+            </div>
+            <li onclick="toggleServiceDetails('facialRejuvenation')">Facial Rejuvenation</li>
+            <div id="facialRejuvenation" class="service-details">
+                <p>Our facial rejuvenation services include chemical peels, microneedling, and advanced laser treatments to brighten and refresh your skin.</p>
+            </div>
+            <li onclick="toggleServiceDetails('cosmeticDermatology')">Cosmetic Dermatology</li>
+            <div id="cosmeticDermatology" class="service-details">
+                <p>Our cosmetic dermatology services focus on enhancing your appearance with minimal downtime, offering a variety of non-invasive procedures.</p>
+            </div>
+            <li onclick="toggleServiceDetails('skinCancerScreening')">Skin Cancer Screening</li>
+            <div id="skinCancerScreening" class="service-details">
+                <p>We provide comprehensive skin cancer screenings to detect early signs of skin cancer, ensuring your health and peace of mind.</p>
+            </div>
+        </ul>
+    </div>
+
+    <div id="team" class="section">
+        <h2>Meet Our Experts</h2>
+        <p>Our team of experienced dermatologists and cosmetologists are dedicated to providing the best care for your skin and beauty. With years of expertise, they work together to offer personalized treatments tailored to your needs.</p>
+        <ul>
+            <li><strong>Dr. Sarah Lee</strong> - Senior Dermatologist</li>
+            <li><strong>Dr. John Smith</strong> - Cosmetic Dermatologist</li>
+            <li><strong>Dr. Emily Clark</strong> - Hair Restoration Specialist</li>
+        </ul>
+    </div>
+
+    <div id="contact" class="section contact-info">
+        <h2>Contact Us</h2>
+        <p>Have questions or want to book an appointment? Reach out to us!</p>
+        <p><strong>Email:</strong> contact@dermocosmetology.com</p>
+        <p><strong>Phone:</strong> +1 800 123 4567</p>
+        <p><strong>Address:</strong> 123 SkinCare Lane, Beauty City, XYZ</p>
+    </div>
+
+    <!-- Appointment Booking Form -->
+    <form action="submit_appointment.php" method="POST">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+    
+        <label for="appointment_date">Preferred Appointment Date:</label>
+        <input type="date" id="appointment_date" name="appointment_date" required>
+
+        <label for="service">Select Service:</label>
+        <select id="service" name="service" required>
+            <option value="Skin Treatments (Acne, Eczema, Psoriasis)">Skin Treatments (Acne, Eczema, Psoriasis)</option>
+            <option value="Hair Loss Treatment">Hair Loss Treatment</option>
+            <option value="Anti-aging Solutions (Botox, Fillers)">Anti-aging Solutions (Botox, Fillers)</option>
+            <option value="Laser Hair Removal">Laser Hair Removal</option>
+            <option value="Facial Rejuvenation">Facial Rejuvenation</option>
+            <option value="Cosmetic Dermatology">Cosmetic Dermatology</option>
+            <option value="Skin Cancer Screening">Skin Cancer Screening</option>
+        </select>
+    
+        <button type="submit">Book Appointment</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2024 Dermatology & Cosmetology Department | All rights reserved</p>
+    </footer>
+</body>
+</html>

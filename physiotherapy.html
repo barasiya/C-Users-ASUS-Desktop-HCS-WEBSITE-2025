@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Physiotherapy Clinic</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9fafb;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #4CAF50; /* Navbar background color */
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+        }
+
+        .navbar a:hover {
+            background-color: #45a049;
+        }
+
+        /* Header Styles */
+        .header {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(90deg, #4caf50, #3e8e41);
+            color: white;
+        }
+
+        .header .logo h1 {
+            font-size: 26px;
+            margin: 0;
+            letter-spacing: 1px;
+        }
+
+        .header .tagline {
+            font-size: 16px;
+            margin: 5px 0;
+            font-style: italic;
+        }
+
+        .doctor-info {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        /* Doctor Photo Styling */
+        .doctor-photo {
+            margin-top: 20px;
+            border-radius: 50%;
+            overflow: hidden;
+            width: 150px;
+            height: 150px;
+            display: inline-block;
+        }
+
+        .doctor-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #333;
+            border-bottom: 3px solid #4caf50;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: #4caf50;
+            font-weight: bold;
+        }
+        
+        ul li a:hover {
+            text-decoration: underline;
+            color: #3e8e41;
+        }
+
+        /* Location Section */
+        .location-section iframe {
+            border: 0;
+            width: 100%;
+            height: 400px;
+            border-radius: 8px;
+            box-shadow: 0px 2px 6px rgb(7, 127, 226);
+        }
+
+/* Footer Styles */
+.footer {
+    background-color: white;  /* Change the background to white */
+    color: #333;  /* Dark text color for better readability */
+    padding: 30px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+    margin-bottom: 20px;
+}
+
+.footer p {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.footer-content strong {
+    color: #4CAF50;  /* Green color for emphasis */
+}
+
+/* Footer bottom section (for copyright) */
+.footer-bottom {
+    font-size: 12px;
+    color: #888;  /* Lighter text color for the copyright */
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Add a subtle hover effect on footer links or text */
+.footer-content p:hover {
+    color: #4CAF50;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .footer {
+        padding: 20px;
+    }
+    .footer-content p {
+        font-size: 12px;
+    }
+    .footer-bottom p {
+        font-size: 10px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <!-- Navbar Section -->
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="logo">
+                <h1>ADITYA PHYSIOTHERAPY CLINIC</h1>
+                <p class="tagline">The caring hands you deserve</p>
+            </div>
+
+            <!-- Doctor Info Section with Photo -->
+            <div class="doctor-info">
+                <div class="doctor-photo">
+                    <img src="doctor-photo.jpg" alt="Dr. Minakshi Gupta">
+                </div>
+                <p><strong>Dr. Minakshi Gupta</strong></p>
+                <p>Physical Therapist</p>
+            </div>
+        </header>
+
+        <!-- About Us Section -->
+        <section>
+            <h2>About Us</h2>
+            <p>
+                At Aditya Physiotherapy Clinic, we are committed to providing exceptional physiotherapy services tailored to your individual needs. 
+                Our experienced team specializes in treating a wide range of conditions using advanced techniques and state-of-the-art equipment. 
+                We believe in holistic care, promoting health and wellness through personalized treatment plans and compassionate support.
+            </p>
+        </section>
+
+        <!-- Therapy Provided Section -->
+        <section>
+            <h2>Therapy Provided</h2>
+            <ul>
+                <li><a href="#">Electro Therapy</a></li>
+                <li><a href="#">Manual Therapy</a></li>
+                <li><a href="#">Exercise Therapy</a></li>
+                <li><a href="#">Balance Training</a></li>
+                <li><a href="#">ANC & PNC (Pregnancy Exercise)</a></li>
+                <li><a href="#">Weight Loss (Obesity)</a></li>
+                <li><a href="#">Orthosis & Prosthesis</a></li>
+                <li><a href="#">Speech Therapy</a></li>
+            </ul>
+        </section>
+
+        <!-- Home Care Services Section -->
+        <section>
+            <h2>Home Care Services</h2>
+            <ul>
+                <li><a href="#">Physiotherapy at Home</a></li>
+                <li><a href="#">Care Taker's (Male & Female)</a></li>
+                <li><a href="#">Nursing Care at Home</a></li>
+                <li><a href="#">Ambulance</a></li>
+                <li><a href="#">Pathology</a></li>
+                <li><a href="#">All Medical/Surgical Equipment on Rent</a></li>
+            </ul>
+        <!-- Our Location Section -->
+<section class="location-section">
+    <h2>Our Location</h2>
+    <iframe
+        src="https://maps.app.goo.gl/P4XEhiByUmfWTmUp9"
+        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</section>
+
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <p><strong>Contact:</strong> 947 996 7310</p>
+            <p><strong>Timing:</strong> Morning 9:00 AM to 2:00 PM, Evening 5:00 PM to 8:00 PM</p>
+            <p><strong>Address:</strong> Shop No. 22, Indus Garden, Centre Point, Bawadia Kalan, Rohit Nagar, Near Mahindra Petrol Pump, Bhopal</p>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Aditya Physiotherapy Clinic | All Rights Reserved</p>
+        </div>
+    </footer>
+<html>    
+    
+    

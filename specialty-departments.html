@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e9f5f5;
+        }
+        header {
+            background-color: #0078d7;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        nav {
+            background-color: #004f8c;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background-color: #f0a500;
+            color: #004f8c;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .department {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .department:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .department h2 {
+            color: #004f8c;
+        }
+        footer {
+            background-color: #004f8c;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            margin-top: 20px;
+        }
+        footer p {
+            margin: 0;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            .department {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hospital Management System</h1>
+        <p>Providing Comprehensive Care Across Multiple Specialties</p>
+    </header>
+    <nav>
+        <a href="#cardiology">Cardiology</a>
+        <a href="#neurology">Neurology</a>
+        <a href="#oncology">Oncology</a>
+        <a href="#pediatrics">Pediatrics</a>
+        <a href="#orthopedics">Orthopedics</a>
+        <a href="#obgyn">Obstetrics & Gynecology</a>
+        <a href="#ent">ENT</a>
+        <a href="#gastroenterology">Gastroenterology</a>
+        <a href="#dermatology">Dermatology</a>
+        <a href="#psychiatry">Psychiatry</a>
+    </nav>
+    <div class="container">
+        <div class="department" id="cardiology">
+            <h2>Cardiology</h2>
+            <p>Specialized care for heart-related conditions, including diagnosis and treatment.</p>
+        </div>
+        <div class="department" id="neurology">
+            <h2>Neurology</h2>
+            <p>Expert care for neurological disorders and brain health.</p>
+        </div>
+        <div class="department" id="oncology">
+            <h2>Oncology</h2>
+            <p>Comprehensive cancer care including diagnosis, treatment, and support.</p>
+        </div>
+        <div class="department" id="pediatrics">
+            <h2>Pediatrics</h2>
+            <p>Dedicated healthcare for infants, children, and adolescents.</p>
+        </div>
+        <div class="department" id="orthopedics">
+            <h2>Orthopedics</h2>
+            <p>Treatment for bone, joint, and muscle conditions.</p>
+        </div>
+        <div class="department" id="obgyn">
+            <h2>Obstetrics & Gynecology</h2>
+            <p>Comprehensive women's health care, including maternity services.</p>
+        </div>
+        <div class="department" id="ent">
+            <h2>ENT (Ear, Nose, Throat)</h2>
+            <p>Specialized care for ear, nose, and throat conditions.</p>
+        </div>
+        <div class="department" id="gastroenterology">
+            <h2>Gastroenterology</h2>
+            <p>Expert care for digestive system disorders.</p>
+        </div>
+        <div class="department" id="dermatology">
+            <h2>Dermatology</h2>
+            <p>Treatment for skin, hair, and nail conditions.</p>
+        </div>
+        <div class="department" id="psychiatry">
+            <h2>Psychiatry & Mental Health</h2>
+            <p>Support for mental health and emotional well-being.</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Hospital Management System. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

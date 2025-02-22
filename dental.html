@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bright Smile Dental Clinic</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: #0074D9;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        header img {
+            max-width: 100px;
+            border-radius: 50%;
+            margin-bottom: 0.5rem;
+        }
+        nav {
+            background: #004d99;
+            padding: 0.5rem;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            padding: 2rem;
+        }
+        .services img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 1rem;
+        }
+        .hidden {
+            display: none;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        button {
+            background: #0074D9;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        button:hover {
+            background: #005bb5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://via.placeholder.com/100" alt="Bright Smile Dental Clinic Logo">
+        <h1>Bright Smile Dental Clinic</h1>
+        <p>Your smile, our priority!</p>
+    </header>
+    <nav>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        <section id="services" class="services hidden">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Teeth Cleaning</li>
+                <li>Cosmetic Dentistry</li>
+                <li>Orthodontics</li>
+                <li>Teeth Whitening</li>
+                <li>Emergency Dental Care</li>
+            </ul>
+            <img src="https://via.placeholder.com/800x400" alt="Dental Services Image">
+        </section>
+        <button id="toggleServices">Click to Open Services</button>
+
+        <section id="about" class="about">
+            <h2>About Us</h2>
+            <p>
+                At Bright Smile Dental Clinic, we are dedicated to providing the best dental care with a friendly and professional touch. 
+                Our experienced team is here to ensure your smile stays healthy and bright!
+            </p>
+        </section>
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <p><strong>Address:</strong> 123 Dental Street, Smile City, TX 75001</p>
+            <p><strong>Phone:</strong> (123) 456-7890</p>
+            <p><strong>Email:</strong> info@brightsmileclinic.com</p>
+            <form action="#" method="post">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="5" required></textarea><br><br>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Bright Smile Dental Clinic. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const toggleButton = document.getElementById('toggleServices');
+        const servicesSection = document.getElementById('services');
+
+        toggleButton.addEventListener('click', () => {
+            if (servicesSection.classList.contains('hidden')) {
+                servicesSection.classList.remove('hidden');
+                toggleButton.textContent = "Click to Close Services";
+            } else {
+                servicesSection.classList.add('hidden');
+                toggleButton.textContent = "Click to Open Services";
+            }
+        });
+    </script>
+</body>
+</html>
